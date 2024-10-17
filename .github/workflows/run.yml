@@ -26,6 +26,8 @@ jobs:
         # Analyzes Java code directly from the codebase without a build
         - language: java-kotlin
           build-mode: none # analyzes Java only
+        - language: python
+          build-mode: none # analyzes Java only
 
 
     # Steps represent a sequence of tasks that will be executed as part of the job
