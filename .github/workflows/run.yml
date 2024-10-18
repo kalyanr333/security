@@ -28,11 +28,7 @@ jobs:
          # build-mode: none # analyzes Java only
         - language: python
           build-mode: none # analyzes Java only
-    permissions:
-        id-token: write
-        contents: read
-        issues: write
-        pull-requests: write
+    permissions: write-all
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
