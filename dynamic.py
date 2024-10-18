@@ -5,6 +5,5 @@ from flask import request
 @app.route("/")
 def example():
     operation = request.args.get("operation")
-    if(operation=="operation")
-        eval(f"product_{operation}()") # Noncompliant
-        return "OK"
+    eval(f"product_{operation}()") # Noncompliant
+    return "OK"
