@@ -1,5 +1,9 @@
-import os
+# The following code is vulnerable to arbitrary code execution because it runs dynamic Python code based on untrusted data.
 
-directory = input("Enter the directory to list: ")
-command = f"ls {directory}"  # Vulnerable to Command Injection
-os.system(command)
+from flask import request
+
+@app.route("/")
+def example():
+    operation = request.args.get("operation")
+    eval(f"product_{operation}()") # Noncompliant
+    return "OK"
